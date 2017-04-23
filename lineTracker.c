@@ -13,7 +13,7 @@ const int Threshold = 2850;
 task main() {
 	while(true){
 		if(vexRT[Btn7U]){
-			while(true){
+			while(!vexRT[Btn7D]){
 				if(SensorValue[LineMiddle]>Threshold){
 					motor[port1]=0;
 					motor[port10]=32;
@@ -23,6 +23,8 @@ task main() {
 					motor[port10]=0;
 				}
 			}
+			motor[port1]=0;
+			motor[port10]=0;
 		}else{
 			writeDebugStreamLine("%d",SensorValue[LineMiddle]);
 			if(SensorValue[LineMiddle]>Threshold){
