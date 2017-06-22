@@ -1,0 +1,33 @@
+
+task main(){
+while(true){
+	motor[port2]=0;
+	while(!vexRT[Btn7U]){}
+	motor[port2]=10;
+	sleep(2*1000);
+	motor[port2]=20;
+	sleep(2*1000);
+	motor[port2]=30;
+	sleep(2*1000);
+	motor[port2]=40;
+	sleep(2*1000);
+	motor[port2]=50;
+	sleep(2*1000);
+	motor[port2]=60;
+	sleep(2*1000);
+	motor[port2]=70;
+	sleep(2*1000);
+	motor[port2]=80;
+	sleep(2*1000);
+	motor[port2]=90;
+	sleep(2*1000);
+	motor[port2]=100;
+	sleep(2*1000);
+	motor[port2]=110;
+	sleep(2*1000);
+	motor[port2]=120;
+	sleep(2*1000);
+	motor[port2]=127;
+	sleep(10*1000);
+}
+}
