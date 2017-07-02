@@ -9,18 +9,18 @@ while(true){
 	if(vexRT[Btn7U]){
 		motor[port2]=127;
 		motor[port3]=127;
-		motor[port8]=-127;
-		motor[port9]=-127;
+		//motor[port8]=-127;
+		//motor[port9]=-127;
 	}else if(vexRT[Btn7D]){
 		motor[port2]=-127;
 		motor[port3]=-127;
-		motor[port8]=127;
-		motor[port9]=127;
+		//motor[port8]=127;
+		//motor[port9]=127;
 	}else{
 		motor[port2]=0;
 		motor[port3]=0;
-		motor[port8]=0;
-		motor[port9]=0;
+		//motor[port8]=0;
+		//motor[port9]=0;
 	}
 }
 }
