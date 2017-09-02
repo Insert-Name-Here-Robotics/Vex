@@ -55,21 +55,24 @@ task main()
 			}
 		}else if(vexRT[Btn7U]){	//set currentPort to positive
 			portDirection[currentPort]=1;
-			writeDebugStream("Motor at port %d has value %d",currentPort,1);
+			writeDebugStreamLine("Motor at port %d has value %d",currentPort,1);
+			while(vexRT[Btn7U]){} //wait until released
 		}else if(vexRT[Btn7D]){ //set currentPort to negative
 			portDirection[currentPort]=-1;
-			writeDebugStream("Motor at port %d has value %d",currentPort,-1);
+			writeDebugStreamLine("Motor at port %d has value %d",currentPort,-1);
+			while(vexRT[Btn7D]){} //wait until released
 		}else if(vexRT[Btn7L]){ //set currentPort to zero
 			portDirection[currentPort]=0;
-			writeDebugStream("Motor at port %d has value %d",currentPort,0);
+			writeDebugStreamLine("Motor at port %d has value %d",currentPort,0);
+			while(vexRT[Btn7L]){} //wait until released
 		}else if(vexRT[Ch4]<0){
 			currentPort--;
-			writeDebugStream("Switching to motor %d",currentPort);
-			while(vexRT[Ch4]!=0){}//wait until released
+			writeDebugStreamLine("Switching to motor %d with value %d",currentPort,portDirection[currentPort]);
+			while(vexRT[Ch4]!=0){} //wait until released
 		}else if(vexRT[Ch4]>0){
 			currentPort++;
-			writeDebugStream("Switching to motor %d",currentPort);
-			while(vexRT[Ch4]!=0){}//wait until released
+			writeDebugStreamLine("Switching to motor %d with value %d",currentPort,portDirection[currentPort]);
+			while(vexRT[Ch4]!=0){} //wait until released
 		}else{
 			for(int j = 1; j <= 10; j++){
 					motor[portIndex[j]] = 0;
